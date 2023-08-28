@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hunting Phones</title>
+  <!-- tailwind and daisy -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind and daisy -->
+</head>
+
+<body>
+  <header>
+    <h1 class="text-2xl md:text-4xl lg:text-5xl text-center mt-3">
+      Hunting Phones
+    </h1>
+  </header>
+  <main class="max-w-7xl mx-auto mt-10">
+    <!-- search -->
+    <section class="m-4 p-4 text-center space-y-5 lg:space-x-2 ">
+      <input id="search-filed" type="text" placeholder="search" class="input input-bordered w-full max-w-xs" />
+      <button onclick=" handelSearch()" class="btn btn-outline">
+        search
+      </button>
+    </section>
+    <!-- search -->
+    <!-- load animation  -->
+    <div id="spinner" class=" text-center m-14 hidden">
+      <span class="loading loading-spinner loading-lg "></span>
+    </div>
+    <!-- load animation  -->
+    <section>
+      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      <!-- show all btn -->
+      <div id="show-all" class="hidden m-5 text-center">
+        <button onclick="handelShowAll()" class="btn btn-outline">Show All</button>
+      </div>
+      <!-- show all btn -->
+    </section>
+    <!-- MODAL -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <form method="dialog" class="modal-box">
+        
+        <h3 id="modal-titel" class="font-bold text-3xl">Hello!</h3>
+        <!-- js -->
+        <div id="modal-container" class="space-y-5">
+
+        </div>
+        <div class="modal-action justify-start">
+          <button class="btn ">Close</button>
+        </div>
+      </form>
+    </dialog>
+    <!-- MODAL -->
+
+
+      <div>
+       
+      </div>
+
+
+
+  </main>
+  <footer></footer>
+  <script src="./js/phone.js"></script>
+</body>
+
+</html>
